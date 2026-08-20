@@ -17,8 +17,8 @@ describe('About Component', () => {
   test('renders heading, tagline, story, and mission correctly', () => {
     render(<About {...mockProps} />);
 
-    // Check headings
-    expect(screen.getByRole('heading', { name: "Chorley Wildcats", level: 1 })).toBeInTheDocument();
+    // Check logo image and tagline
+    expect(screen.getByRole('img', { name: "Chorley Wildcats" })).toBeInTheDocument();
     expect(screen.getByText("Unleash Your Potential")).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: "Our Story", level: 2 })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: "Our Mission", level: 2 })).toBeInTheDocument();

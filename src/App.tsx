@@ -4,6 +4,9 @@ import './App.css';
 // Import config and data
 import { clubInfo, calendarEvents, donationGoals, galleryItems } from './config/clubData';
 
+// Import logo SVG
+import logoDark from './assets/wildcats-logo-dark.svg';
+
 // Import components
 import About from './components/About';
 import Calendar from './components/Calendar';
@@ -68,8 +71,7 @@ function App() {
         <div className="header-inner">
           {/* Logo with energetic fire/paw style */}
           <div className="logo-section" onClick={() => setActiveTab('about')}>
-            <Flame className="logo-icon animate-flicker" size={32} aria-hidden="true" />
-            <span className="logo-text">{clubInfo.name}</span>
+            <img src={logoDark} alt={clubInfo.name} className="logo-svg" />
           </div>
 
           {/* Navigation Tabs */}
