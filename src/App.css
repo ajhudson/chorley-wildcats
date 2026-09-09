@@ -1227,3 +1227,65 @@
     top: 100px;
   }
 }
+
+/* --- Launch Page Styles --- */
+.launch-page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.launch-hero {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.launch-logo {
+  height: 180px;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto 2rem;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+.launch-title {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-weight: 800;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.launch-tagline {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .launch-hero {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .launch-logo {
+    height: 140px;
+    margin-bottom: 1.5rem;
+  }
+
+  .launch-title {
+    font-size: 2rem;
+  }
+}
