@@ -13,6 +13,7 @@ import Calendar from './components/Calendar';
 import Donations from './components/Donations';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
+import LaunchPage from './components/LaunchPage';
 
 // Import icons
 import { 
@@ -21,15 +22,21 @@ import {
   HeartHandshake, 
   Images, 
   Mail, 
-  Flame,
-  Phone,
-  MapPin
+  Flame, 
+  Phone, 
+  MapPin 
 } from 'lucide-react';
 
 type TabType = 'about' | 'calendar' | 'donations' | 'gallery' | 'contact';
 
 function App() {
+  // Pre-launch mode: set to true once the rest of the website is ready to launch
+  const isLaunched = false;
   const [activeTab, setActiveTab] = useState<TabType>('about');
+
+  if (!isLaunched) {
+    return <LaunchPage />;
+  }
 
   const renderActiveComponent = () => {
     switch (activeTab) {
