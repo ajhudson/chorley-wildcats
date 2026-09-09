@@ -1,6 +1,7 @@
 import React from 'react';
 import type { AboutProps } from './About.types';
 import { Sparkles, Trophy, Users, Shield } from 'lucide-react';
+import logoTransparent from '../../assets/wildcats-logo-transparent.svg';
 
 export const About: React.FC<AboutProps> = ({
   name,
@@ -23,7 +24,7 @@ export const About: React.FC<AboutProps> = ({
   return (
     <article className="about-section" aria-labelledby="about-heading">
       <header className="about-hero">
-        <h1 id="about-heading" className="about-title">{name}</h1>
+        <img id="about-heading" src={logoTransparent} alt={name} className="logo-svg about-logo" />
         <p className="about-tagline">{tagline}</p>
       </header>
 
