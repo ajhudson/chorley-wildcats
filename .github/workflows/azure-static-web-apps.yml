@@ -42,6 +42,9 @@ jobs:
           pnpm test
 
       - name: Build static site with Vite
+        env:
+          VITE_POSTHOG_PROJECT_TOKEN: ${{ secrets.VITE_POSTHOG_PROJECT_TOKEN }}
+          VITE_POSTHOG_HOST: ${{ vars.VITE_POSTHOG_HOST }}
         run: pnpm run build
 
       - name: Deploy to Azure Static Web Apps
