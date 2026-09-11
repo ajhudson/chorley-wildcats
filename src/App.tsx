@@ -26,15 +26,17 @@ import {
   Phone, 
   MapPin 
 } from 'lucide-react';
+import { useFeatureFlagEnabled } from '@posthog/react';
+import { useEnvVars } from './hooks/useEnvVars';
 
 type TabType = 'about' | 'calendar' | 'donations' | 'gallery' | 'contact';
 
 function App() {
-  // Pre-launch mode: set to true once the rest of the website is ready to launch
-  const isLaunched = false;
   const [activeTab, setActiveTab] = useState<TabType>('about');
+  const currentMode = useEnvVars('MODE') as string;
+  const isSiteLaunched = useFeatureFlagEnabled(`site-launched-${currentMode}`);
 
-  if (!isLaunched) {
+  if (!isSiteLaunched) {
     return <LaunchPage />;
   }
 
