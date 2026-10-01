@@ -6,7 +6,6 @@ import logoTransparent from '../../assets/wildcats-logo-transparent.svg';
 export const About: React.FC<AboutProps> = ({
   name,
   tagline,
-  mission,
   aboutText,
   stats,
 }) => {
@@ -32,13 +31,6 @@ export const About: React.FC<AboutProps> = ({
         <section className="about-card main-about-card" aria-labelledby="story-heading">
           <h2 id="story-heading" className="section-subtitle">Our Story</h2>
           <p className="about-body-text">{aboutText}</p>
-        </section>
-
-        <section className="about-card mission-card" aria-labelledby="mission-heading">
-          <h2 id="mission-heading" className="section-subtitle">Our Mission</h2>
-          <blockquote className="mission-quote">
-            <p>"{mission}"</p>
-          </blockquote>
         </section>
       </div>
 

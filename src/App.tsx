@@ -16,15 +16,15 @@ import Gallery from './components/Gallery';
 import LaunchPage from './components/LaunchPage';
 
 // Import icons
-import { 
-  Users, 
-  Calendar as CalendarIcon, 
-  HeartHandshake, 
-  Images, 
-  Mail, 
-  Flame, 
-  Phone, 
-  MapPin 
+import {
+  Users,
+  Calendar as CalendarIcon,
+  HeartHandshake,
+  Images,
+  Mail,
+  Flame,
+  Phone,
+  MapPin
 } from 'lucide-react';
 import { useFeatureFlagEnabled } from '@posthog/react';
 import { useEnvVars } from './hooks/useEnvVars';
@@ -44,12 +44,11 @@ function App() {
     switch (activeTab) {
       case 'about':
         return (
-          <About 
-            name={clubInfo.name} 
-            tagline={clubInfo.tagline} 
-            mission={clubInfo.mission} 
-            aboutText={clubInfo.aboutText} 
-            stats={clubInfo.stats} 
+          <About
+            name={clubInfo.name}
+            tagline={clubInfo.tagline}
+            aboutText={clubInfo.aboutText}
+            stats={clubInfo.stats}
           />
         );
       case 'calendar':
@@ -62,12 +61,11 @@ function App() {
         return <Contact contactInfo={clubInfo.contact} />;
       default:
         return (
-          <About 
-            name={clubInfo.name} 
-            tagline={clubInfo.tagline} 
-            mission={clubInfo.mission} 
-            aboutText={clubInfo.aboutText} 
-            stats={clubInfo.stats} 
+          <About
+            name={clubInfo.name}
+            tagline={clubInfo.tagline}
+            aboutText={clubInfo.aboutText}
+            stats={clubInfo.stats}
           />
         );
     }
@@ -188,15 +186,15 @@ function App() {
           <div className="footer-social-column" aria-label="Social Connections">
             <h3>Join our Pack</h3>
             <p>Stay up to date with match results, cancellations, and social events via Facebook.</p>
-            <a 
-              href={`https://${clubInfo.contact.facebook}`} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={`https://${clubInfo.contact.facebook}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="social-link"
               aria-label="Facebook Profile link"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true" style={{ flexShrink: 0 }}>
-                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
               </svg>
               <span>Follow the Wildcats</span>
             </a>
