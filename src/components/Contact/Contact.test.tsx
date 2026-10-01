@@ -3,10 +3,9 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { Contact } from './Contact';
 
 const mockContactInfo = {
-  email: "test@example.com",
+  time: "Every Saturday 9am - 11am",
   phone: "12345",
-  address: "Test Ground, Road, Town",
-  facebook: "facebook.com/test"
+  address: "Test Ground, Road, Town"
 };
 
 describe('Contact Component', () => {
@@ -14,7 +13,7 @@ describe('Contact Component', () => {
     render(<Contact contactInfo={mockContactInfo} />);
 
     expect(screen.getByRole('heading', { name: "Get in Touch", level: 1 })).toBeInTheDocument();
-    expect(screen.getByText("test@example.com")).toBeInTheDocument();
+    expect(screen.getByText("Every Saturday 9am - 11am")).toBeInTheDocument();
     expect(screen.getByText("12345")).toBeInTheDocument();
     expect(screen.getByText("Test Ground, Road, Town")).toBeInTheDocument();
 

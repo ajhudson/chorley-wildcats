@@ -25,7 +25,8 @@ import {
   Flame,
   Phone,
   MapPin,
-  Clock
+  Clock,
+  Info
 } from 'lucide-react';
 import { useFeatureFlagEnabled } from '@posthog/react';
 import { useEnvVars } from './hooks/useEnvVars';
@@ -162,7 +163,7 @@ function App() {
             </div>
             <p className="footer-tagline">{clubInfo.tagline}</p>
             <p className="footer-copyright">
-              &copy; {new Date().getFullYear()} {clubInfo.name}. All rights reserved.
+              &copy; {new Date().getFullYear()} {clubInfo.name}.
             </p>
           </div>
 
@@ -180,6 +181,18 @@ function App() {
               <li>
                 <Phone size={14} aria-hidden="true" />
                 <span>{clubInfo.contact.phone}</span>
+              </li>
+              <li>
+                <a
+                  href={clubInfo.contact.infoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-info-link"
+                  aria-label="Website maintainer LinkedIn profile (opens in new tab)"
+                >
+                  <Info size={14} aria-hidden="true" />
+                  <span>{clubInfo.contact.info}</span>
+                </a>
               </li>
             </ul>
           </div>

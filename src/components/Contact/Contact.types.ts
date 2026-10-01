@@ -1,4 +1,5 @@
 export interface ContactInfo {
+  time?: string;
   phone: string;
   address: string;
 }

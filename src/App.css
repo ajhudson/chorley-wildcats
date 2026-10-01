@@ -1062,6 +1062,20 @@
   flex-shrink: 0;
 }
 
+.footer-info-link {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-info-link:hover,
+.footer-info-link:focus-visible {
+  color: var(--accent-color);
+}
+
 .footer-social-column p {
   font-size: 0.9rem;
   color: var(--text-muted);

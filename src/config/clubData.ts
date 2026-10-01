@@ -33,6 +33,8 @@ export interface ClubInfo {
     time: string;
     phone: string;
     address: string;
+    info: string;
+    infoUrl: string;
   };
 }
 
@@ -51,7 +53,9 @@ export const clubInfo: ClubInfo = {
   contact: {
     time: "Every Saturday 9am - 11am (except late December and early January)",
     phone: "01257 51553",
-    address: "Chorley All Seasons Leisure Centre, Water Street, Chorley PR7 1EX"
+    address: "Chorley All Seasons Leisure Centre, Water Street, Chorley PR7 1EX",
+    info: "Website maintained by Andy Hudson",
+    infoUrl: "https://www.linkedin.com/in/andy-hudson"
   }
 };
 
