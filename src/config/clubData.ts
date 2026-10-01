@@ -30,6 +30,7 @@ export interface ClubInfo {
   aboutText: string;
   stats: { label: string; value: string | number }[];
   contact: {
+    time: string;
     phone: string;
     address: string;
   };
@@ -48,6 +49,7 @@ export const clubInfo: ClubInfo = {
     { label: "Number of Sports", value: 14 }
   ],
   contact: {
+    time: "Every Saturday 9am - 11am (except late December and early January)",
     phone: "01257 51553",
     address: "Chorley All Seasons Leisure Centre, Water Street, Chorley PR7 1EX"
   }
