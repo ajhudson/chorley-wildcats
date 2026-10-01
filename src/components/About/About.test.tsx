@@ -5,7 +5,6 @@ import { About } from './About';
 const mockProps = {
   name: "Chorley Wildcats",
   tagline: "Unleash Your Potential",
-  mission: "Inspirational mission statement",
   aboutText: "This is the story of our club.",
   stats: [
     { label: "Active Wildcats", value: "150+" },
@@ -21,11 +20,9 @@ describe('About Component', () => {
     expect(screen.getByRole('img', { name: "Chorley Wildcats" })).toBeInTheDocument();
     expect(screen.getByText("Unleash Your Potential")).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: "Our Story", level: 2 })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: "Our Mission", level: 2 })).toBeInTheDocument();
 
     // Check text contents
     expect(screen.getByText("This is the story of our club.")).toBeInTheDocument();
-    expect(screen.getByText('"Inspirational mission statement"')).toBeInTheDocument();
   });
 
   test('renders all stats with proper accessibility labels', () => {

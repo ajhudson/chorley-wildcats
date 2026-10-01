@@ -172,7 +172,7 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -189,24 +189,6 @@
   font-size: 1.1rem;
   line-height: 1.7;
   color: var(--text-muted);
-}
-
-.mission-card {
-  background: linear-gradient(135deg, #2a0808 0%, var(--bg-card) 100%);
-  border-color: var(--accent-border);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.mission-quote {
-  margin: 0;
-  font-style: italic;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: var(--accent-color);
-  font-weight: 600;
-  position: relative;
 }
 
 .stats-section {
@@ -1008,8 +990,13 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1.5fr 1.5fr;
+  grid-template-columns: 1fr auto;
   gap: 3rem;
+  justify-content: space-between;
+}
+
+.footer-info-column {
+  justify-self: end;
 }
 
 .footer-brand-column {
@@ -1164,6 +1151,10 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+  }
+
+  .footer-info-column {
+    justify-self: center;
   }
 
   .footer-brand-column, .footer-contact-list li {

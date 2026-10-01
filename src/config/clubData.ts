@@ -27,33 +27,31 @@ export interface GalleryItem {
 export interface ClubInfo {
   name: string;
   tagline: string;
-  mission: string;
   aboutText: string;
-  stats: { label: string; value: string }[];
+  stats: { label: string; value: string | number }[];
   contact: {
-    email: string;
+    time: string;
     phone: string;
     address: string;
-    facebook: string;
   };
 }
+
+const yearsRunning = new Date().getFullYear() - 2002;
 
 export const clubInfo: ClubInfo = {
   name: "Chorley Wildcats",
   tagline: "Unleash Your Potential, Join the Pack!",
-  mission: "To inspire young athletes in Chorley to build confidence, teamwork skills, and a lifelong love for sports in a safe, fun, and energetic environment.",
-  aboutText: "Founded in 2020, Chorley Wildcats is a community-focused sports club dedicated to children aged 5-14. We offer weekly training sessions, friendly weekend matches, and holiday camps across multiple sports, including Football, Basketball, Athletics, and Dodgeball. Our qualified coaches focus not just on skills, but on sportsmanship, healthy habits, and making great friends.",
+  aboutText: "Formed in 2002, we are a sports club for children aged 4-18 who have additional needs. We meet every Saturday at Chorley All Seasons Leisure Centre betwee 9am - 11am. Developing fine and gross motor sklls, peer interaction through sport at their level.",
   stats: [
-    { label: "Active Wildcats", value: "150+" },
-    { label: "Expert Coaches", value: "8" },
-    { label: "Sports Offered", value: "4" },
-    { label: "Trophies Won", value: "12" }
+    { label: "Years Running", value: yearsRunning },
+    { label: "Members", value: 20 },
+    { label: "Volunteers", value: 6 },
+    { label: "Number of Sports", value: 14 }
   ],
   contact: {
-    email: "info@chorleywildcats.org.uk",
-    phone: "01257 555123",
-    address: "Chorley Community Sports Centre, Park Rd, Chorley PR7 1QS",
-    facebook: "facebook.com/chorleywildcats"
+    time: "Every Saturday 9am - 11am (except late December and early January)",
+    phone: "01257 51553",
+    address: "Chorley All Seasons Leisure Centre, Water Street, Chorley PR7 1EX"
   }
 };
 
