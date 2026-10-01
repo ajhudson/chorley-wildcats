@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { ContactProps } from './Contact.types';
-import { Mail, Phone, MapPin, HeartHandshake, CheckCircle, Clock } from 'lucide-react';
+import { Phone, MapPin, HeartHandshake, CheckCircle, Clock } from 'lucide-react';
 
 export const Contact: React.FC<ContactProps> = ({ contactInfo }) => {
   const [formData, setFormData] = useState({
@@ -47,16 +47,6 @@ export const Contact: React.FC<ContactProps> = ({ contactInfo }) => {
               <div>
                 <h3>Session Times</h3>
                 <p>{contactInfo.time}</p>
-              </div>
-            </div>
-          )}
-
-          {contactInfo.email && (
-            <div className="contact-info-card">
-              <Mail className="contact-card-icon" aria-hidden="true" />
-              <div>
-                <h3>Email Us</h3>
-                <p><a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
               </div>
             </div>
           )}
