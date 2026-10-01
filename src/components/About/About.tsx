@@ -1,6 +1,6 @@
 import React from 'react';
 import type { AboutProps } from './About.types';
-import { Sparkles, Trophy, Users, Shield } from 'lucide-react';
+import { CalendarDays, Users, ShieldUser, Volleyball } from 'lucide-react';
 import logoTransparent from '../../assets/wildcats-logo-transparent.svg';
 
 export const About: React.FC<AboutProps> = ({
@@ -12,11 +12,11 @@ export const About: React.FC<AboutProps> = ({
   // Map icons to stat entries dynamically or just statically render based on standard indices
   const getStatIcon = (index: number) => {
     switch (index) {
-      case 0: return <Users className="stat-card-icon" aria-hidden="true" />;
-      case 1: return <Shield className="stat-card-icon" aria-hidden="true" />;
-      case 2: return <Sparkles className="stat-card-icon" aria-hidden="true" />;
-      case 3: return <Trophy className="stat-card-icon" aria-hidden="true" />;
-      default: return <Trophy className="stat-card-icon" aria-hidden="true" />;
+      case 0: return <CalendarDays className="stat-card-icon" aria-hidden="true" />;
+      case 1: return <Users className="stat-card-icon" aria-hidden="true" />;
+      case 2: return <ShieldUser className="stat-card-icon" aria-hidden="true" />;
+      case 3: return <Volleyball className="stat-card-icon" aria-hidden="true" />;
+      default: return <Volleyball className="stat-card-icon" aria-hidden="true" />;
     }
   };
 

@@ -172,7 +172,7 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -189,24 +189,6 @@
   font-size: 1.1rem;
   line-height: 1.7;
   color: var(--text-muted);
-}
-
-.mission-card {
-  background: linear-gradient(135deg, #2a0808 0%, var(--bg-card) 100%);
-  border-color: var(--accent-border);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.mission-quote {
-  margin: 0;
-  font-style: italic;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: var(--accent-color);
-  font-weight: 600;
-  position: relative;
 }
 
 .stats-section {

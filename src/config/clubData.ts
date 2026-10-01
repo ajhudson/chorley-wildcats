@@ -28,22 +28,24 @@ export interface ClubInfo {
   name: string;
   tagline: string;
   aboutText: string;
-  stats: { label: string; value: string }[];
+  stats: { label: string; value: string | number }[];
   contact: {
     phone: string;
     address: string;
   };
 }
 
+const yearsRunning = new Date().getFullYear() - 2002;
+
 export const clubInfo: ClubInfo = {
   name: "Chorley Wildcats",
   tagline: "Unleash Your Potential, Join the Pack!",
-  aboutText: "We are a sports club for children aged 4-18 who have additional needs. We meet every Saturday at Chorley All Seasons Leisure Centre betwee 9am - 11am. Developing fine and gross motor sklls, peer interaction through sport at their level.",
+  aboutText: "Formed in 2002, we are a sports club for children aged 4-18 who have additional needs. We meet every Saturday at Chorley All Seasons Leisure Centre betwee 9am - 11am. Developing fine and gross motor sklls, peer interaction through sport at their level.",
   stats: [
-    { label: "Active Wildcats", value: "150+" },
-    { label: "Expert Coaches", value: "8" },
-    { label: "Sports Offered", value: "4" },
-    { label: "Trophies Won", value: "12" }
+    { label: "Years Running", value: yearsRunning },
+    { label: "Members", value: 20 },
+    { label: "Volunteers", value: 6 },
+    { label: "Number of Sports", value: 14 }
   ],
   contact: {
     phone: "01257 51553",
