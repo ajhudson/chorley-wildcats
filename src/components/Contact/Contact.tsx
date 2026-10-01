@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { ContactProps } from './Contact.types';
-import { Clock, Phone, MapPin, HeartHandshake, CheckCircle } from 'lucide-react';
+import { Phone, MapPin, HeartHandshake, CheckCircle, Clock } from 'lucide-react';
 
 export const Contact: React.FC<ContactProps> = ({ contactInfo }) => {
   const [formData, setFormData] = useState({

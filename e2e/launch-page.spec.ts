@@ -30,5 +30,17 @@ test.describe('Launch Page E2E Tests', () => {
     await expect(page.locator('footer')).toHaveCount(0);
     await expect(page.locator('.main-footer')).toHaveCount(0);
   });
+
+  test('should render main site when valid override GUID query param is provided', async ({ page }) => {
+    // Navigate with the configured test override GUID from .env
+    await page.goto('/?id=5b897400-e26b-4f59-b6d1-6819c3206641');
+
+    // Main navigation and header should now be visible
+    await expect(page.locator('.main-header')).toBeVisible();
+    await expect(page.locator('.main-navigation')).toBeVisible();
+
+    // Coming soon heading should not be present
+    await expect(page.getByRole('heading', { name: 'Coming Soon', level: 1 })).toHaveCount(0);
+  });
 });
 
