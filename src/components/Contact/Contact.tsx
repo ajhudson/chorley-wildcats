@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { ContactProps } from './Contact.types';
-import { Mail, Phone, MapPin, HeartHandshake, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, HeartHandshake, CheckCircle, Clock } from 'lucide-react';
 
 export const Contact: React.FC<ContactProps> = ({ contactInfo }) => {
   const [formData, setFormData] = useState({
@@ -41,13 +41,25 @@ export const Contact: React.FC<ContactProps> = ({ contactInfo }) => {
       <div className="contact-container">
         {/* Contact Info Cards */}
         <section className="contact-info-panel" aria-label="Direct Contact Channels">
-          <div className="contact-info-card">
-            <Mail className="contact-card-icon" aria-hidden="true" />
-            <div>
-              <h3>Email Us</h3>
-              <p><a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
+          {contactInfo.time && (
+            <div className="contact-info-card">
+              <Clock className="contact-card-icon" aria-hidden="true" />
+              <div>
+                <h3>Session Times</h3>
+                <p>{contactInfo.time}</p>
+              </div>
             </div>
-          </div>
+          )}
+
+          {contactInfo.email && (
+            <div className="contact-info-card">
+              <Mail className="contact-card-icon" aria-hidden="true" />
+              <div>
+                <h3>Email Us</h3>
+                <p><a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
+              </div>
+            </div>
+          )}
 
           <div className="contact-info-card">
             <Phone className="contact-card-icon" aria-hidden="true" />
