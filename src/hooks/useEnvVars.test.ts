@@ -71,6 +71,18 @@ describe('useEnvVars hook', () => {
       const { result } = renderHook(() => useEnvVars('VITE_POSTHOG_HOST'));
       expect(result.current).toBe('https://test.posthog.com');
     });
+
+    it('returns VITE_SITE_LAUNCH_OVERRIDE when defined', () => {
+      vi.stubEnv('VITE_SITE_LAUNCH_OVERRIDE', '5b897400-e26b-4f59-b6d1-6819c3206641');
+      const { result } = renderHook(() => useEnvVars('VITE_SITE_LAUNCH_OVERRIDE'));
+      expect(result.current).toBe('5b897400-e26b-4f59-b6d1-6819c3206641');
+    });
+
+    it('returns defaultValue when variable is undefined and defaultValue is provided', () => {
+      vi.stubEnv('VITE_SITE_LAUNCH_OVERRIDE', undefined as unknown as string);
+      const { result } = renderHook(() => useEnvVars('VITE_SITE_LAUNCH_OVERRIDE', 'default-guid'));
+      expect(result.current).toBe('default-guid');
+    });
   });
 
   describe('missing and undefined environment variables', () => {

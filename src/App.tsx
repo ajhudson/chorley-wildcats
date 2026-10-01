@@ -35,9 +35,27 @@ type TabType = 'about' | 'calendar' | 'donations' | 'gallery' | 'contact';
 function App() {
   const [activeTab, setActiveTab] = useState<TabType>('about');
   const currentMode = useEnvVars('MODE') as string;
+  const overrideGuid = useEnvVars('VITE_SITE_LAUNCH_OVERRIDE', '') as string;
   const isSiteLaunched = useFeatureFlagEnabled(`site-launched-${currentMode}`);
 
-  if (!isSiteLaunched) {
+  const [isOverrideAuthorized] = useState(() => {
+    if (!overrideGuid || typeof window === 'undefined') return false;
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const queryId = params.get('id');
+      if (queryId && queryId.trim().toLowerCase() === overrideGuid.trim().toLowerCase()) {
+        sessionStorage.setItem('site_launch_override', 'true');
+        return true;
+      }
+      return sessionStorage.getItem('site_launch_override') === 'true';
+    } catch {
+      return false;
+    }
+  });
+
+  const isVisible = Boolean(isSiteLaunched || isOverrideAuthorized);
+
+  if (!isVisible) {
     return <LaunchPage />;
   }
 
