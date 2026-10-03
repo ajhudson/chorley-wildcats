@@ -1,3 +1,20 @@
+import img1 from '../assets/gallery/1.jpg';
+import img2 from '../assets/gallery/2.jpg';
+import img3 from '../assets/gallery/3.jpg';
+import img4 from '../assets/gallery/4.jpg';
+import img5 from '../assets/gallery/5.jpg';
+import img6 from '../assets/gallery/6.jpg';
+import img7 from '../assets/gallery/7.jpg';
+import img8 from '../assets/gallery/8.jpg';
+import img9 from '../assets/gallery/9.jpg';
+import img10 from '../assets/gallery/10.jpg';
+import img11 from '../assets/gallery/11.jpg';
+import img12 from '../assets/gallery/12.jpg';
+import img13 from '../assets/gallery/13.jpg';
+import img14 from '../assets/gallery/14.jpg';
+import img15 from '../assets/gallery/15.jpg';
+import img16 from '../assets/gallery/16.jpg';
+
 export interface CalendarEvent {
   id: string;
   date: string;
@@ -141,30 +158,101 @@ export const donationGoals: DonationGoal[] = [
     category: "Coaching"
   }
 ];
-
 export const galleryItems: GalleryItem[] = [
   {
     id: "1",
-    url: "https://images.unsplash.com/photo-1517649763962-0c623066013B?auto=format&fit=crop&w=800&q=80",
-    title: "Saturday Soccer Drills",
-    description: "Our young Wildcats developing dribbling skills and speed on the turf."
+    url: img1,
+    title: "Floorball Action",
+    description: "Developing stick-handling, coordination, and team play in the sports hall."
   },
   {
     id: "2",
-    url: "https://images.unsplash.com/photo-1544698310-74ea9d1c8258?auto=format&fit=crop&w=800&q=80",
-    title: "Basketball Hoop Shoot",
-    description: "Learning the fundamentals of shooting, passing, and teamwork in the hall."
+    url: img2,
+    title: "Indoor Javelin & Athletics",
+    description: "Practicing throwing technique and having fun with adapted athletics gear."
   },
   {
     id: "3",
-    url: "https://images.unsplash.com/photo-1502224562085-639556652f33?auto=format&fit=crop&w=800&q=80",
-    title: "Athletics Relay Fun",
-    description: "Wildcats dash! Building speed, agility, and sports coordination."
+    url: img3,
+    title: "Smiles Behind the Scenes",
+    description: "Good fun and laughs with our coaching and volunteer team."
   },
   {
     id: "4",
-    url: "https://images.unsplash.com/photo-1519766304817-4f37bda74a27?auto=format&fit=crop&w=800&q=80",
-    title: "The Winning Teampack",
-    description: "Celebrating teamwork, friendship, and effort at the end of training."
+    url: img4,
+    title: "Wheelchair Basketball",
+    description: "Inclusive sports for everyone — dribbling, passing, and teamwork on court."
+  },
+  {
+    id: "5",
+    url: img5,
+    title: "Standing Long Jump",
+    description: "Testing power, balance, and landing technique on the measurement mat."
+  },
+  {
+    id: "6",
+    url: img6,
+    title: "Speed Bounce Challenge",
+    description: "Building agility, rhythm, and cardiovascular fitness two feet at a time."
+  },
+  {
+    id: "7",
+    url: img7,
+    title: "Athletics in Motion",
+    description: "Working on gross motor skills and explosive jumping with coach support."
+  },
+  {
+    id: "8",
+    url: img8,
+    title: "Indoor Football Skills",
+    description: "Penalty practice, ball control, and shooting skills on the turf."
+  },
+  {
+    id: "9",
+    url: img9,
+    title: "Celebrating Success",
+    description: "High energy, team spirit, and pure joy after a great session."
+  },
+  {
+    id: "10",
+    url: img10,
+    title: "Our Dedicated Volunteers",
+    description: "Warm, supportive leaders making every Saturday morning possible."
+  },
+  {
+    id: "11",
+    url: img11,
+    title: "Indoor Cricket",
+    description: "At the crease! Learning batting stance, hand-eye coordination, and scoring runs."
+  },
+  {
+    id: "12",
+    url: img12,
+    title: "Coaching & Support",
+    description: "One-on-one guidance to help every young player build confidence."
+  },
+  {
+    id: "13",
+    url: img13,
+    title: "Balance & Movement Fun",
+    description: "Creative games like balloon relays that build motor control and lots of laughs."
+  },
+  {
+    id: "14",
+    url: img14,
+    title: "Curling",
+    description: "Precision, aim, and strategy sliding stones towards the target mat."
+  },
+  {
+    id: "15",
+    url: img15,
+    title: "Table Tennis Rallies",
+    description: "Fast-paced rallies developing quick reflexes and friendly competition."
+  },
+  {
+    id: "16",
+    url: img16,
+    title: "Basketball Dribbling Drills",
+    description: "Mastering bounce control and court awareness in a fun, sensory-friendly environment."
   }
 ];
