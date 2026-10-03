@@ -79,14 +79,20 @@ export const Gallery: React.FC<GalleryProps> = ({ items }) => {
             aria-label={`${currentIndex + 1} of ${items.length}`}
             aria-live="polite"
           >
-            {/* Image element with fallbacks */}
+            {/* Image element with ambient backdrop for mixed orientations */}
             <div className="carousel-image-frame">
+              <img
+                src={activeItem.url}
+                alt=""
+                aria-hidden="true"
+                className="carousel-img-bg"
+              />
               <img
                 src={activeItem.url}
                 alt={activeItem.title}
                 className="carousel-img"
               />
-              <div className="carousel-img-overlay"></div>
+              <div className="carousel-img-overlay" aria-hidden="true"></div>
             </div>
 
             {/* Caption Card */}
